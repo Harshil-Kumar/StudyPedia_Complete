@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Connection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='lang_connection.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js"></script>
+
+</head>
+<body>
+  <script src="{{ url_for('static', filename='lang_connection.js') }}"></script>
+
+  <header>
+    <h1>Find Connection</h1>
+  </header>
+  <main>
+    <div class="search-container">
+      <input type="text" id="input1" placeholder="Enter first word">
+      <input type="text" id="input2" placeholder="Enter second word">
+      <button id="search-btn">Find Connection</button>
+      <select id="language-select">
+                
+        <option value="option1">Language</option>
+        <option value="Telugu">Telugu</option>
+        <option value="English">English</option>
+        <option value="Tamil">Tamil</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Kannada">Kannada</option>
+        <option value="Marati">Marati</option>
+        <option value="Malayalam">Malayalam</option>
+
+        
+    </select>
+    </div>
+    <div id="result"></div>
+  </main>
+</body>
+</html>

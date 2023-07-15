@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPedia</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+
+   
+</head>
+<body>
+  
+  
+    <div class="previous-searches">
+        <div id="user-info">
+            <span id="username">Hello {{ user.name }}</span>
+        </div>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <h2>Previous Searches</h2>
+        <ul id="previous-searches-list"></ul>
+    
+    </div>
+    <div class="main-content" id="main-content">
+        <div class="content-heading">
+            <h1>Search Results</h1>
+        </div>
+        <form id="search-form">
+            <input type="text" id="search-bar" placeholder="What concept do you want to learn today?">
+            <button type="submit" id="submit-btn">Search</button>
+            
+            <select id="language-select">
+                <option value="option1">Language</option>
+                <option value="Telugu">Telugu</option>
+                <option value="English">English</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Marati">Marati</option>
+                <option value="Malayalam">Malayalam</option>
+            </select>
+            
+        </form>
+        <div id="result"></div>
+        
+    </div>
+    
+    
+    <div class="learn-differently">
+        <h2>Smart Learn</h2>
+        <button id="difference-btn">Find Difference</button>
+        <button id="connection-btn">Find Connection</button>
+        <p class="developer">Developed by <u>D Harshil Kumar Reddy</u></p>
+    </div>
+    
+</body>
+</html>
