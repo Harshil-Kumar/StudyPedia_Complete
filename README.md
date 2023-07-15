@@ -52,4 +52,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-StudyPedia makes use of the OpenAI GPT-3.5 model. Special thanks to OpenAI for providing access to their powerful language model.
+StudyPedia makes use of the OpenAI Key. Special thanks to OpenAI for providing access to their powerful language model.
