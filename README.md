@@ -21,7 +21,7 @@ https://drive.google.com/file/d/1Pkjo3HMMJAJ39cSlLf4Mcu_pNzI_MrA8/view?usp=drive
 - Python
 - Flask
 - SQLAlchemy
-- OpenAI GPT-3.5 Model
+- OpenAI Key
 - HTML/CSS/JavaScript
 
 ## Installation
