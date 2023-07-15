@@ -6,7 +6,7 @@ StudyPedia is an interactive learning platform that simplifies complex concepts 
 
 ## Features
 
-- <u>User Registration and Login:</u> Users can create an account and log in to access personalized features.
+- <u>User Registration and Login:<u> Users can create an account and log in to access personalized features.
 - <u>Concept Search:</u> Users can search for specific concepts they want to learn and receive explanations tailored for a 10-year-old comprehension level.
 - <u>Multilingual Support:</u> StudyPedia supports multiple languages, allowing users to learn in their preferred language.
 - <u>Concept Connections and Differences:</u> Users can explore the connections and differences between different concepts in a clear and concise manner.
