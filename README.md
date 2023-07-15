@@ -2,7 +2,7 @@
 
 # StudyPedia
 
-StudyPedia is an innovative educational web application that aims to enhance learning experiences. It provides simplified explanations of complex concepts, making them easily understandable for learners of all ages. The platform utilizes OpenAI's GPT-3.5 model and natural language processing techniques to generate concise and comprehensive responses.
+StudyPedia is an interactive learning platform that simplifies complex concepts for users. It provides explanations using natural language processing and generates user-friendly content with examples and emojis. Users can explore various subjects, find differences and connections, and access their search history, fostering effective learning in multiple languages.
 
 ## Features
 
