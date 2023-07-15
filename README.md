@@ -12,7 +12,7 @@ StudyPedia is an interactive learning platform that simplifies complex concepts 
 - <ins>Concept Connections and Differences:</ins> Users can explore the connections and differences between different concepts in a clear and concise manner.
 - <ins>Search History:</ins> Users' search history is stored, allowing them to revisit previous searches.
 
-## Demo Video
+## Explanation of Project
 
 https://drive.google.com/file/d/1Pkjo3HMMJAJ39cSlLf4Mcu_pNzI_MrA8/view?usp=drive_link
 
