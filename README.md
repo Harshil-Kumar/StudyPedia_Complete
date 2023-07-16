@@ -23,6 +23,7 @@ https://drive.google.com/file/d/1Pkjo3HMMJAJ39cSlLf4Mcu_pNzI_MrA8/view?usp=drive
 - SQLAlchemy
 - OpenAI Key
 - HTML/CSS/JavaScript
+- Markdown Language
 
 ## Installation
 
