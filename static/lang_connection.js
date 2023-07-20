@@ -4,20 +4,20 @@ const resultElement = document.getElementById('result');
 const urlParams = new URLSearchParams(window.location.search);
 const selectedOption = urlParams.get('option');
 
-// Use the selected option as needed
+
 console.log('Selected option:', selectedOption);
-// Function to calculate the word difference using OpenAI API
+
 async function calculateDifference() {
   const input1 = document.getElementById('input1').value;
   const input2 = document.getElementById('input2').value;
 
   const difference = await getWordDifference(input1, input2);
 
-  // Display the difference in the result element
+
   resultElement.innerHTML = difference;
 }
 
-// Function to get the word difference using OpenAI API
+
 async function getWordDifference(input1, input2) {
   const finalSearchTerm = "What is the conection between " + input1 + " and " + input2 + "? Give me the answer in "+ selectedOption +" language. Dont ask any questions in return. Explain it briefly. Give me example if possible. Explain in tabular format if possible. your response must be in markdown format with emojis if possible." ;
 
@@ -38,7 +38,7 @@ async function getWordDifference(input1, input2) {
     const response = await fetch('https://api.openai.com/v1/chat/completions', options);
     const data = await response.json();
 
-    // Extract the message content from the response
+
     const message = data.choices[0].message.content;
 
     const renderedMessage = marked(message);
@@ -59,7 +59,7 @@ const languageSelect = document.getElementById('language-select');
 languageSelect.addEventListener('change', function() {
     const selectedOption = languageSelect.value;
   
-    // Redirect to the language.html page with the selected option as a query parameter
+
     window.location.href = `/lang_connection?option=${selectedOption}`;
   });
 });
