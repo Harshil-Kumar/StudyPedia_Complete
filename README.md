@@ -23,7 +23,7 @@ StudyPedia is an interactive learning platform that simplifies complex concepts 
 
 ## Explanation of the Project
 
-https://drive.google.com/file/d/1Pkjo3HMMJAJ39cSlLf4Mcu_pNzI_MrA8/view?usp=drive_link
+Full Explanation of the project: https://drive.google.com/file/d/1Pkjo3HMMJAJ39cSlLf4Mcu_pNzI_MrA8/view?usp=drive_link
 
 ## Technologies Used
 
