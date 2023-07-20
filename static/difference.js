@@ -3,19 +3,15 @@ document.addEventListener('DOMContentLoaded', function(){
   const resultElement = document.getElementById('result');
   const speakerButton = document.getElementById('speaker-btn');
 
-
-  // Function to calculate the word difference using OpenAI API
   async function calculateDifference() {
     const input1 = document.getElementById('input1').value;
     const input2 = document.getElementById('input2').value;
 
     const difference = await getWordDifference(input1, input2);
 
-    // Display the difference in the result element
     resultElement.innerHTML = difference;
   }
 
-  // Function to get the word difference using OpenAI API
   async function getWordDifference(input1, input2) {
     const finalSearchTerm = "What is the difference between " + input1 + " and " + input2 + "? Dont ask any questions in return. Explain it briefly. Give me example if possible. Explain in tabular format if possible. your response must be in markdown format with emojis if possible. ";
 
@@ -41,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
       const renderedMessage = marked(message);
 
-      // Update the content of the result element with the message
       resultElement.innerHTML = renderedMessage;
       return resultElement.innerHTML;
     } catch (error) {
@@ -54,11 +49,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const languageSelect = document.getElementById('language-select');
 
-  // Function to open the "Difference between Concepts" page
   languageSelect.addEventListener('change', function() {
     const selectedOption = languageSelect.value;
 
-    // Redirect to the language.html page with the selected option as a query parameter
     window.location.href = `/lang_difference?option=${selectedOption}`;
   });
 
