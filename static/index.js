@@ -3,23 +3,19 @@ const submitButton = document.getElementById('submit-btn');
 const resultElement = document.getElementById('result');
 const previousSearchesList = document.getElementById('previous-searches-list');
 
-
 const searchTermsSet = new Set();
 
-// Function to handle the form submission
 async function getMessage(e) {
   e.preventDefault();
 
   const searchTerm = document.getElementById('search-bar').value;
 
   if (searchTermsSet.has(searchTerm)) {
-    return; // Skip if the search term already exists in the set
+    return; 
   }
-  searchTermsSet.add(searchTerm); // Add the new search term to the set
-
+  searchTermsSet.add(searchTerm); 
   const finalSearchTerm = `Explain the following concept: ${searchTerm} totally like i am 12 years old. Don't ask any return questions. Just explain it to me. And give me examples too. And explain it very crispily. your response must be in markdown format with emojis if possible. When you give an answer, dont mention that you are giving the answer to a 10 year old. just direct answer.`
 
-  // Create a new list item element for the search query
   previousSearchesList.innerHTML = '';
   searchTermsSet.forEach((searchTerm) => {
     const listItem = document.createElement('li');
@@ -54,7 +50,6 @@ async function getMessage(e) {
 
     const renderedMessage = marked(message);
 
-    // Update the content of the result element with the message
     resultElement.innerHTML = renderedMessage;
   } catch (error) {
     console.error(error);
@@ -63,28 +58,25 @@ async function getMessage(e) {
 
 submitButton.addEventListener('click', getMessage);
 
-
-// Function to search a concept
 function searchConcept(searchTerm) {
   document.getElementById('search-bar').value = searchTerm;
   submitButton.click();
 }
 
-// Function to open the "Difference between Concepts" page
 function openDifferencePage() {
   window.open('/difference', '_blank');
 }
 
-// Add event listener to the "Difference" button
+
 const differenceButton = document.getElementById('difference-btn');
 differenceButton.addEventListener('click', openDifferencePage);
 
-// Function to open the "Connection between Concepts" page
+
 function openConnectionPage() {
   window.open('/connection', '_blank');
 }
 
-// Add event listener to the "Connection" button
+
 const connectionButton = document.getElementById('connection-btn');
 connectionButton.addEventListener('click', openConnectionPage);
 
