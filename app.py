@@ -22,19 +22,15 @@ def register():
     password = request.form['password']
     name = request.form['name']
 
-    # Check if the username already exists in the database
     if User.query.filter_by(username=username).first():
         return render_template('signup.html', info='Username already exists')
 
     with app.app_context():
-        # Create a new user instance
         new_user = User(username=username, password=password, name=name)
 
-        # Add the new user to the database
         db.session.add(new_user)
         db.session.commit()
 
-    # Redirect to the login page
     return redirect(url_for('login'))
 
 @app.route('/form_login', methods=['POST', 'GET'])
@@ -44,11 +40,10 @@ def login():
         password = request.form['password']
 
         with app.app_context():
-            # Check if the username and password match in the database
             user = User.query.filter_by(username=username, password=password).first()
             if user:
                 session['username'] = user.name
-                return redirect(url_for('index', username=username))  # Pass the username as a parameter
+                return redirect(url_for('index', username=username))
             else:
                 return render_template('login.html', error="Invalid username or password")
     else:
@@ -56,8 +51,8 @@ def login():
 
 @app.route('/home')
 def index():
-    username = request.args.get('username')  # Get the username from the query parameter
-    user = User.query.filter_by(username=username).first()  # Retrieve the user from the database
+    username = request.args.get('username')  
+    user = User.query.filter_by(username=username).first()  
     return render_template('index.html', user=user)
 
 @app.route('/difference')
