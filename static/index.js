@@ -45,7 +45,6 @@ async function getMessage(e) {
     const response = await fetch('https://api.openai.com/v1/chat/completions', options);
     const data = await response.json();
 
-    // Extract the message content from the response
     const message = data.choices[0].message.content;
 
     const renderedMessage = marked(message);
@@ -85,7 +84,6 @@ const languageSelect = document.getElementById('language-select');
 languageSelect.addEventListener('change', function() {
   const selectedOption = languageSelect.value;
 
-  // Redirect to the language.html page with the selected option as a query parameter
   window.location.href = `/language?option=${selectedOption}`;
 });
 });
